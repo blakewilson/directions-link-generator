@@ -7,10 +7,18 @@ import ReactGA from 'react-ga'
 
 const Home = () => {
   useEffect(() => {
-    ReactGA.initialize('UA-132058143-6')
-    ReactGA.pageview(window.location.pathname + window.location.search)
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'UA-132058143-6', {
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_title: window.document.title,
+    })
   }, [])
-  
+
   return (
     <App>
       <Head>
@@ -21,6 +29,8 @@ const Home = () => {
         <link href="https://directionslinkgenerator.com" rel="canonical"></link>
 
         <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32"></link>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132058143-6"></script>
       </Head>
 
       <main>
