@@ -9,6 +9,12 @@ const Home = () => {
     <App>
       <Head>
         <title>Google Maps Directions Link Generator</title>
+        <meta name="description" content="Google Maps Directions Link Generator will create a link for you to use on your website for customers to instantly get directors to your location."></meta>
+        <meta name="og:title" property="og:title" content="Google Maps Directions Link Generator"></meta>
+
+        <link href="https://directionslinkgenerator.com" rel="canonical"></link>
+
+        <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32"></link>
       </Head>
 
       <main>
