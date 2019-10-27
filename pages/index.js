@@ -37,6 +37,10 @@ const Home = () => {
       </main>
 
       <style jsx>{`
+      :global(body) {
+        color: #444;
+      }
+      
       h2 {
         font-weight: normal;
       }
