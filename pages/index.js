@@ -15,6 +15,16 @@ const Home = () => {
         <link href="https://directionslinkgenerator.com" rel="canonical"></link>
 
         <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32"></link>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132058143-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-132058143-6');
+        </script>
+
       </Head>
 
       <main>
