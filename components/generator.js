@@ -91,6 +91,10 @@ const Generator = () => {
                         }}>Copy</button>
                     </div>
                 }
+
+                {address &&
+                    <p className="helper-text">Test your link: <a target="_blank" href={gMapsUrl + encodeURI(address)}>Get Directions to {address}</a></p>
+                }
             </div>
 
             {
@@ -158,6 +162,11 @@ const Generator = () => {
                     line-height: 1.5;
                 }
 
+                .helper-text a {
+                    color: #018000;
+                    text-decoration: none;
+                }
+
                 .container {
                     width: 100%;
                     max-width: 760px;
@@ -223,7 +232,7 @@ const Generator = () => {
                 }
 
             `}</style>
-        </section >
+        </section>
     )
 }
 
