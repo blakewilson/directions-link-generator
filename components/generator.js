@@ -129,6 +129,8 @@ const Generator = () => {
                     padding-top: 2rem;
                     padding-bottom: 2rem;
 
+                    position: relative;
+
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -231,7 +233,26 @@ const Generator = () => {
                     cursor: pointer;
                 }
 
+                @media (max-width: 780px) {
+                    .product-hunt {
+                        display: none;
+                    }
+                }
+
+                .product-hunt {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+
+                .product-hunt img {
+                    width: 200px;
+                }
+
             `}</style>
+            <a className="product-hunt" href="https://www.producthunt.com/posts/google-maps-directions-link-generator?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-google-maps-directions-link-generator" target="_blank">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=172473&theme=light&period=daily" alt="Google Maps Directions Link Generator - Generate a Google Maps directions link to your business | Product Hunt Embed" width="250px" height="54px" />
+            </a>
         </section>
     )
 }
