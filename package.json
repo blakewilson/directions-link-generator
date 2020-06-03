@@ -9,7 +9,7 @@
     "deploy": "npm install && next build && next start -p 7001"
   },
   "dependencies": {
-    "next": "9.0.7",
+    "next": "^9.4.4",
     "react": "16.10.1",
     "react-dom": "16.10.1",
     "react-ga": "^2.7.0"
