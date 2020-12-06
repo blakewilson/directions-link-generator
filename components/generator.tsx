@@ -15,8 +15,6 @@ const Generator = () => {
   const { state } = useStore();
   const { address } = state;
   const { setAddress } = useAddress();
-  // const [address, setAddress] = useState("");
-  const [isCopiedMessageVisible, setIsCopiedMessageVisible] = useState(0);
 
   const gMapsUrl = `https://www.google.com/maps/dir//`;
 
@@ -43,27 +41,6 @@ const Generator = () => {
 
         <TestLink />
       </div>
-
-      {useEffect(() => {
-        if (isCopiedMessageVisible) {
-          const message = document.querySelector(".js-copied-message");
-
-          message.style.bottom = `calc(-${message.clientHeight}px - 1rem)`;
-
-          setTimeout(() => {
-            message.style.visibility = "visible";
-            message.style.bottom = "1rem";
-          }, 200);
-
-          setTimeout(() => {
-            message.style.bottom = `calc(-${message.clientHeight}px - 1rem)`;
-          }, 3000);
-
-          message.style.visibility = "hidden";
-        }
-      }, [isCopiedMessageVisible])}
-
-      <CopiedMessage />
 
       <ProductHunt />
     </section>
