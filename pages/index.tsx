@@ -4,21 +4,9 @@ import Head from "next/head";
 import Generator from "../components/generator";
 import ReactGA from "react-ga";
 import About from "../components/about";
+import useGoogleAnalytics from "../hooks/useGoogleAnalytics";
 
 const Home = () => {
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "UA-132058143-6", {
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      page_title: window.document.title,
-    });
-  }, []);
-
   return (
     <>
       <Head>

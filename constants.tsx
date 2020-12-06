@@ -6,3 +6,5 @@ export const ADDRESS_INPUT_ID = "address";
 
 export const RESULT_INPUT_NAME = "result";
 export const RESULT_INPUT_ID = "result";
+
+export const GA_TRACKING_ID = "UA-132058143-6";
