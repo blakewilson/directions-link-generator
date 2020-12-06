@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useAddress from "../hooks/useAddress";
-import styles from "../styles/ResultsSeparator.module.css";
+import styles from "../styles/resultsSeparator.module.css";
 
 const ResultsSeparator: FC = () => {
   const { address } = useAddress();
