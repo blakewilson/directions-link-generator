@@ -15,7 +15,18 @@ const useAddress = () => {
     }
   };
 
-  return { setAddress };
+  const clearAddress = () => {
+    dispatch({
+      type: "SET_ADDRESS",
+      payload: "",
+    });
+
+    if (window) {
+      window.localStorage.removeItem(ADDRESS_LOCAL_STORAGE_NAME);
+    }
+  };
+
+  return { setAddress, clearAddress };
 };
 
 export default useAddress;
