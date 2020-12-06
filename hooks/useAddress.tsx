@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { ADDRESS_LOCAL_STORAGE_NAME } from "../constants";
-import { useStore } from "../store";
+import { ADDRESS_LOCAL_STORAGE_NAME } from "../lib/constants";
+import { useStore } from "../lib/store";
 import useLocalStorage from "./useLocalStorage";
 
 const useAddress = () => {

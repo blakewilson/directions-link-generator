@@ -1,5 +1,5 @@
-import { useStore } from "../store";
-import { GOOGLE_MAPS_URL } from "../constants";
+import { useStore } from "../lib/store";
+import { GOOGLE_MAPS_URL } from "../lib/constants";
 
 const useGoogleMapsUrl = () => {
   const { state } = useStore();

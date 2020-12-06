@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { StoreProvider } from "../store";
+import { StoreProvider } from "../lib/store";
 import "../styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

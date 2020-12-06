@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useGoogleMapsUrl from "../hooks/useGoogleMapsUrl";
-import { useStore } from "../store";
+import { useStore } from "../lib/store";
 import styles from "../styles/testLink.module.css";
 
 const TestLink: FC = () => {

@@ -1,4 +1,4 @@
-import { ADDRESS_LOCAL_STORAGE_NAME } from "../constants";
+import { ADDRESS_LOCAL_STORAGE_NAME } from "../lib/constants";
 
 const useLocalStorage = () => {
   const removeLocalStorageAddress = () => {

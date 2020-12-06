@@ -1,4 +1,4 @@
-import { ADDRESS_INPUT_ID, ADDRESS_INPUT_NAME } from "../constants";
+import { ADDRESS_INPUT_ID, ADDRESS_INPUT_NAME } from "../lib/constants";
 import useAddress from "../hooks/useAddress";
 import styles from "../styles/addressInput.module.css";
 

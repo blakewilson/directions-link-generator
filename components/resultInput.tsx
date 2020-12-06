@@ -1,5 +1,5 @@
 import { FC, useRef } from "react";
-import { RESULT_INPUT_ID, RESULT_INPUT_NAME } from "../constants";
+import { RESULT_INPUT_ID, RESULT_INPUT_NAME } from "../lib/constants";
 import useGoogleMapsUrl from "../hooks/useGoogleMapsUrl";
 import styles from "../styles/resultInput.module.css";
 
