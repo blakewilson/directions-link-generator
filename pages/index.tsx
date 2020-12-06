@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Head from "next/head";
-import Generator from "../components/generator";
-import ReactGA from "react-ga";
+import React from "react";
 import About from "../components/about";
-import useGoogleAnalytics from "../hooks/useGoogleAnalytics";
+import Generator from "../components/generator";
 
 const Home = () => {
   return (
@@ -22,18 +19,6 @@ const Home = () => {
         ></meta>
 
         <link href="https://directionslinkgenerator.com" rel="canonical"></link>
-
-        <link
-          rel="icon"
-          type="image/png"
-          href="static/favicon-32x32.png"
-          sizes="32x32"
-        ></link>
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-132058143-6"
-        ></script>
       </Head>
 
       <main>
