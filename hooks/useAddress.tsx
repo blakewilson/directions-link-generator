@@ -2,7 +2,8 @@ import { ADDRESS_LOCAL_STORAGE_NAME } from "../constants";
 import { useStore } from "../store";
 
 const useAddress = () => {
-  const { dispatch } = useStore();
+  const { state, dispatch } = useStore();
+  const { address } = state;
 
   const setAddress = (newAddress: string) => {
     dispatch({
@@ -26,7 +27,7 @@ const useAddress = () => {
     }
   };
 
-  return { setAddress, clearAddress };
+  return { address, setAddress, clearAddress };
 };
 
 export default useAddress;

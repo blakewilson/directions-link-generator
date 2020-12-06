@@ -1,0 +1,17 @@
+.addressInput {
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.helperText {
+  margin-left: 1.5rem;
+  line-height: 1.5;
+}
+
+.helperText a {
+  color: #018000;
+  text-decoration: none;
+}
