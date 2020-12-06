@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, FC, useContext, useReducer } from "react";
 
 export interface GlobalStore {
   address: string;
@@ -34,7 +34,7 @@ const reducer = (state: GlobalStore, action: StoreAction) => {
   }
 };
 
-export const StoreProvider = ({ children }) => {
+export const StoreProvider: FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

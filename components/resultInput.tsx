@@ -6,7 +6,7 @@ import useCopyNotification from "../hooks/useCopyNotification";
 
 const ResultInput: FC = () => {
   const { setNotificationVisibility } = useCopyNotification();
-  const resultInputRef = useRef(null);
+  const resultInputRef = useRef<HTMLInputElement>(null);
   const resultUrl = useGoogleMapsUrl();
 
   if (!resultUrl) {
@@ -30,10 +30,12 @@ const ResultInput: FC = () => {
       <button
         className={styles.resultButton}
         onClick={(e) => {
-          resultInputRef.current.select();
-          document.execCommand("copy");
+          if (resultInputRef.current !== null) {
+            resultInputRef.current.select();
+            document.execCommand("copy");
 
-          setNotificationVisibility(true);
+            setNotificationVisibility(true);
+          }
         }}
       >
         Copy
