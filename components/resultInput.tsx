@@ -1,33 +1,35 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
+import { RESULT_INPUT_ID, RESULT_INPUT_NAME } from "../constants";
 import useGoogleMapsUrl from "../hooks/useGoogleMapsUrl";
 import styles from "../styles/resultInput.module.css";
 
 const ResultInput: FC = () => {
-  const url = useGoogleMapsUrl();
+  const resultInputRef = useRef(null);
+  const resultUrl = useGoogleMapsUrl();
 
-  if (!url) {
+  if (!resultUrl) {
     return null;
   }
 
   return (
     <div className={styles.result}>
       <input
-        name="link"
+        ref={resultInputRef}
+        name={RESULT_INPUT_NAME}
         className={[styles.resultInput, styles.link].join(" ")}
-        id="link"
+        id={RESULT_INPUT_ID}
         readOnly
         onClick={(e) => {
-          e.target.select();
+          (e.target as HTMLInputElement).select();
         }}
-        value={url}
+        value={resultUrl}
       />
+
       <button
         className={styles.resultButton}
         onClick={(e) => {
-          const directionsUrl = document.getElementById("link");
-          directionsUrl.select();
+          resultInputRef.current.select();
           document.execCommand("copy");
-          //   setIsCopiedMessageVisible(1);
         }}
       >
         Copy
