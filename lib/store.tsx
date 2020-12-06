@@ -2,6 +2,7 @@ import React, { createContext, useContext, useReducer } from "react";
 
 export interface GlobalStore {
   address: string;
+  isCopyNotificationVisible: boolean;
 }
 
 export interface StoreAction {
@@ -11,6 +12,7 @@ export interface StoreAction {
 
 const initialState: GlobalStore = {
   address: "",
+  isCopyNotificationVisible: false,
 };
 
 const StoreContext = createContext<{
@@ -25,6 +27,8 @@ const reducer = (state: GlobalStore, action: StoreAction) => {
   switch (action.type) {
     case "SET_ADDRESS":
       return { ...state, address: action.payload };
+    case "SET_IS_COPY_NOTIFICATION_VISIBLE":
+      return { ...state, isCopyNotificationVisible: action.payload };
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }

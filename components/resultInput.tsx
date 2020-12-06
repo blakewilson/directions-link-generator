@@ -2,8 +2,10 @@ import { FC, useRef } from "react";
 import { RESULT_INPUT_ID, RESULT_INPUT_NAME } from "../lib/constants";
 import useGoogleMapsUrl from "../hooks/useGoogleMapsUrl";
 import styles from "../styles/resultInput.module.css";
+import useCopyNotification from "../hooks/useCopyNotification";
 
 const ResultInput: FC = () => {
+  const { setNotificationVisibility } = useCopyNotification();
   const resultInputRef = useRef(null);
   const resultUrl = useGoogleMapsUrl();
 
@@ -30,6 +32,8 @@ const ResultInput: FC = () => {
         onClick={(e) => {
           resultInputRef.current.select();
           document.execCommand("copy");
+
+          setNotificationVisibility(true);
         }}
       >
         Copy

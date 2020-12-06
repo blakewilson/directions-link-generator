@@ -2,6 +2,7 @@ import React from "react";
 import useAddress from "../hooks/useAddress";
 import styles from "../styles/generator.module.css";
 import AddressInput from "./addressInput";
+import CopyNotification from "./copyNotification";
 import Logo from "./logo";
 import ProductHunt from "./productHunt";
 import ResultInput from "./resultInput";
@@ -27,6 +28,8 @@ const Generator = () => {
         <ResultInput />
         <TestLink />
       </div>
+
+      <CopyNotification />
 
       <ProductHunt />
     </section>

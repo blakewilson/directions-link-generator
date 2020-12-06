@@ -1,0 +1,25 @@
+.notification {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  transition: bottom 0.2s ease-in-out;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.isVisible {
+  opacity: 1;
+}
+
+.icon {
+  width: 1rem;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
