@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import useCopyNotification from "../hooks/useCopyNotification";
 import styles from "../styles/copyNotification.module.css";
 
 const CopyNotification: FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
   const {
     isCopyNotificationVisible,
     setNotificationVisibility,
@@ -15,7 +16,8 @@ const CopyNotification: FC = () => {
       return;
     }
 
-    setClassList([styles.notification, styles.isVisible]);
+    ref.current!.style.display = "flex";
+    setClassList([styles.notification, styles.flex, styles.isVisible]);
 
     const timer = setTimeout(() => {
       setClassList([styles.notification]);
@@ -25,7 +27,7 @@ const CopyNotification: FC = () => {
   }, [isCopyNotificationVisible]);
 
   return (
-    <div className={classList.join(" ")}>
+    <div ref={ref} className={classList.join(" ")}>
       <svg
         className={styles.icon}
         xmlns="http://www.w3.org/2000/svg"

@@ -30,12 +30,10 @@ const ResultInput: FC = () => {
       <button
         className={styles.resultButton}
         onClick={(e) => {
-          if (resultInputRef.current !== null) {
-            resultInputRef.current.select();
-            document.execCommand("copy");
+          resultInputRef.current!.select();
+          document.execCommand("copy");
 
-            setNotificationVisibility(true);
-          }
+          setNotificationVisibility(true);
         }}
       >
         Copy

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import About from "../components/about";
+import Footer from "../components/footer";
 import Generator from "../components/generator";
 
 const Home = () => {
@@ -24,6 +25,8 @@ const Home = () => {
       <main>
         <Generator />
         <About />
+
+        <Footer />
       </main>
     </>
   );
