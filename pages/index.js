@@ -52,21 +52,6 @@ const Home = () => {
         <Generator />
         <About />
       </main>
-
-      <style jsx>{`
-        :global(body) {
-          color: #444;
-        }
-
-        h2 {
-          font-weight: normal;
-        }
-
-        p {
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-      `}</style>
     </>
   );
 };

@@ -4,7 +4,7 @@ import styles from "../styles/about.module.css";
 const About: FC = () => {
   return (
     <section className={styles.about}>
-      <h2>About This Project</h2>
+      <h2 className={styles.sectionHeader}>About This Project</h2>
       <p>
         Google Maps Directions Link Generator lets you quickly enter a business
         name or address, then will generate a link for you to get directions
