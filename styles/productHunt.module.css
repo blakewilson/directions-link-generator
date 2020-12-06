@@ -1,0 +1,15 @@
+@media (max-width: 780px) {
+  .productHunt {
+    display: none;
+  }
+}
+
+.productHunt {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.productHunt img {
+  width: 200px;
+}

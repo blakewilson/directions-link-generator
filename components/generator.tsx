@@ -8,6 +8,8 @@ import Logo from "./logo";
 import AddressInput from "./addressInput";
 import ResultsSeperator from "./resultsSeperator";
 import ResultInput from "./resultInput";
+import styles from "../styles/generator.module.css";
+import ProductHunt from "./productHunt";
 
 const Generator = () => {
   const { state } = useStore();
@@ -29,7 +31,9 @@ const Generator = () => {
     <section>
       <div className="container">
         <Logo />
-        <h1>Google Maps Directions Link Generator</h1>
+        <h1 className={styles.pageTitle}>
+          Google Maps Directions Link Generator
+        </h1>
 
         <AddressInput />
 
@@ -188,18 +192,8 @@ const Generator = () => {
           width: 200px;
         }
       `}</style>
-      <a
-        className="product-hunt"
-        href="https://www.producthunt.com/posts/google-maps-directions-link-generator?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-google-maps-directions-link-generator"
-        target="_blank"
-      >
-        <img
-          src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=172473&theme=light&period=daily"
-          alt="Google Maps Directions Link Generator - Generate a Google Maps directions link to your business | Product Hunt Embed"
-          width="250px"
-          height="54px"
-        />
-      </a>
+
+      <ProductHunt />
     </section>
   );
 };
