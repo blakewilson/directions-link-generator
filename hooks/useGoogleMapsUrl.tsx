@@ -5,13 +5,11 @@ const useGoogleMapsUrl = () => {
   const { state } = useStore();
   const { address } = state;
 
-  return () => {
-    if (!address) {
-      return null;
-    }
+  if (!address) {
+    return null;
+  }
 
-    return `${GOOGLE_MAPS_URL}${encodeURI(address)}`;
-  };
+  return `${GOOGLE_MAPS_URL}${encodeURI(address)}`;
 };
 
 export default useGoogleMapsUrl;

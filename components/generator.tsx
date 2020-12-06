@@ -3,6 +3,7 @@ import CopiedMessage from "./copiedMessage";
 import Router from "next/router";
 import { useStore } from "../store";
 import useAddress from "../hooks/useAddress";
+import TestLink from "./testLink";
 
 const Generator = () => {
   const { state } = useStore();
@@ -154,14 +155,7 @@ const Generator = () => {
           </div>
         )}
 
-        {address && (
-          <p className="helper-text">
-            Test your link:{" "}
-            <a target="_blank" href={gMapsUrl + encodeURI(address)}>
-              Get Directions to {address}
-            </a>
-          </p>
-        )}
+        <TestLink />
       </div>
 
       {useEffect(() => {

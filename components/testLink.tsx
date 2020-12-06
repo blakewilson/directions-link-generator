@@ -8,7 +8,7 @@ const TestLink: FC = () => {
   const { address } = state;
   const gMapsUrl = useGoogleMapsUrl();
 
-  if (!address || gMapsUrl) {
+  if (!address || !gMapsUrl) {
     return null;
   }
 
