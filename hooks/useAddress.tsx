@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import { ADDRESS_LOCAL_STORAGE_NAME } from "../constants";
 import { useStore } from "../store";
+import useLocalStorage from "./useLocalStorage";
 
 const useAddress = () => {
   const { state, dispatch } = useStore();
   const { address } = state;
+  const { getLocalStorageAddress } = useLocalStorage();
 
   const setAddress = (newAddress: string) => {
     dispatch({
@@ -27,7 +30,16 @@ const useAddress = () => {
     }
   };
 
-  return { address, setAddress, clearAddress };
+  const setInitialAddress = () => {
+    useEffect(() => {
+      if (window) {
+        const localStorageAddress = getLocalStorageAddress();
+        setAddress(localStorageAddress || "");
+      }
+    }, []);
+  };
+
+  return { address, setAddress, clearAddress, setInitialAddress };
 };
 
 export default useAddress;
