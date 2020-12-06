@@ -1,0 +1,9 @@
+.helperText {
+  margin-left: 1.5rem;
+  line-height: 1.5;
+}
+
+.helperText a {
+  color: #018000;
+  text-decoration: none;
+}
