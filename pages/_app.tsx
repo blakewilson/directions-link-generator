@@ -1,9 +1,13 @@
 import type { AppProps } from "next/app";
+import { StoreProvider } from "../store";
 import "../styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  console.log("called");
-  return <Component {...pageProps} />;
+  return (
+    <StoreProvider>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }
 
 export default MyApp;
