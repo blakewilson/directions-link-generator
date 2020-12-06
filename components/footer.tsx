@@ -12,12 +12,11 @@ const Footer: FC = () => {
       </div>
 
       <div className={styles.section}>
-        This website is open source.{" "}
         <a
           target="_blank"
           href="https://github.com/blakewilson/directions-link-generator"
         >
-          View the source here.
+          This website is open source.
         </a>
       </div>
     </footer>

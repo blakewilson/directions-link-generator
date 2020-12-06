@@ -16,8 +16,7 @@ const CopyNotification: FC = () => {
       return;
     }
 
-    ref.current!.style.display = "flex";
-    setClassList([styles.notification, styles.flex, styles.isVisible]);
+    setClassList([styles.notification, styles.isVisible]);
 
     const timer = setTimeout(() => {
       setClassList([styles.notification]);
