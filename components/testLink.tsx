@@ -15,7 +15,7 @@ const TestLink: FC = () => {
   return (
     <p className={styles.helperText}>
       Test your link:{" "}
-      <a target="_blank" href={gMapsUrl + encodeURI(address)}>
+      <a target="_blank" href={gMapsUrl}>
         Get Directions to {address}
       </a>
     </p>
