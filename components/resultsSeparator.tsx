@@ -1,8 +1,8 @@
 import { FC } from "react";
 import useAddress from "../hooks/useAddress";
-import styles from "../styles/ResultsSeperator.module.css";
+import styles from "../styles/ResultsSeparator.module.css";
 
-const ResultsSeperator: FC = () => {
+const ResultsSeparator: FC = () => {
   const { address } = useAddress();
 
   if (!address) {
@@ -54,4 +54,4 @@ const ResultsSeperator: FC = () => {
   );
 };
 
-export default ResultsSeperator;
+export default ResultsSeparator;

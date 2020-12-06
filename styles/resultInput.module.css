@@ -5,6 +5,7 @@
 .resultInput {
   color: green;
   outline: 0;
+  cursor: not-allowed;
 
   appearance: none;
   width: 100%;

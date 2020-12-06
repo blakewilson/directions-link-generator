@@ -5,7 +5,7 @@ import AddressInput from "./addressInput";
 import Logo from "./logo";
 import ProductHunt from "./productHunt";
 import ResultInput from "./resultInput";
-import ResultsSeperator from "./resultsSeperator";
+import ResultsSeparator from "./resultsSeparator";
 import TestLink from "./testLink";
 
 const Generator = () => {
@@ -23,7 +23,7 @@ const Generator = () => {
         </h1>
 
         <AddressInput />
-        <ResultsSeperator />
+        <ResultsSeparator />
         <ResultInput />
         <TestLink />
       </div>

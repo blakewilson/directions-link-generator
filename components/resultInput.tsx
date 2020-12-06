@@ -16,7 +16,7 @@ const ResultInput: FC = () => {
       <input
         ref={resultInputRef}
         name={RESULT_INPUT_NAME}
-        className={[styles.resultInput, styles.link].join(" ")}
+        className={styles.resultInput}
         id={RESULT_INPUT_ID}
         readOnly
         onClick={(e) => {
